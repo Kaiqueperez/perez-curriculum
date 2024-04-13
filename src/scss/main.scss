@@ -1,0 +1,202 @@
+$gray-color: gray;
+$lightgray-color: lightgray;
+$line-heightMd: 132%;
+$spacing-Lg: 32px;
+
+@mixin flexBoxColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin personalDataContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-size: 24px;
+    color: $gray-color;
+  }
+
+  p,
+  a {
+    color: $lightgray-color;
+  }
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    max-width: fit-content;
+    justify-content: space-between;
+    h2 {
+      font-size: 28px;
+    }
+
+    p,
+    a {
+      font-size: 20px;
+    }
+  }
+}
+
+@mixin personalResumeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 50%;
+
+  h2 {
+    font-size: 24px;
+    color: $gray-color;
+  }
+
+  h3 {
+    font-weight: bold;
+  }
+
+  p {
+    color: $lightgray-color;
+  }
+
+  @media (min-width: 600px) {
+    min-width: 600px;
+    h2 {
+      font-size: 32px;
+    }
+
+    h3 {
+      font-size: 28px;
+      line-height: $line-heightMd;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: $line-heightMd;
+    }
+  }
+}
+
+@mixin personalEducationContainer {
+  width: 50%;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: bold;
+    line-height: $line-heightMd;
+  }
+  h2 {
+    color: $gray-color;
+  }
+
+  h3 {
+    line-height: $line-heightMd;
+    color: $gray-color;
+  }
+
+  @media (min-width: 600px) {
+    min-width: 600px;
+
+    h2 {
+      font-size: 32px;
+    }
+
+    h3 {
+      font-size: 28px;
+    }
+
+    li {
+      font-size: 20px;
+    }
+  }
+}
+
+.personalData {
+  @include flexBoxColumn;
+  padding-top: $spacing-Lg;
+  &-container {
+    @include personalDataContainer;
+  }
+}
+
+.personalResume {
+  @include flexBoxColumn;
+  padding-top: $spacing-Lg;
+  &-container {
+    @include personalResumeContainer;
+  }
+}
+
+.personalEducation {
+  @include flexBoxColumn;
+  padding-top: $spacing-Lg;
+
+  &-container {
+    @include personalEducationContainer;
+  }
+
+  &-graduate {
+    padding-top: $spacing-Lg;
+
+    @media (min-width: 1200px) {
+      white-space: nowrap;
+    }
+  }
+}
+
+.professionalExp {
+  @include flexBoxColumn;
+  padding-top: $spacing-Lg;
+  &-container {
+    width: 50%;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      li:first-child {
+        padding-top: $spacing-Lg;
+      }
+
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        line-height: $line-heightMd;
+
+        :first-child {
+          font-weight: bold;
+        }
+
+        :nth-child(2) {
+          color: $lightgray-color;
+        }
+      }
+    }
+
+    h2 {
+      color: $gray-color;
+    }
+
+    @media (min-width: 600px) {
+      min-width: 600px;
+
+      h2 {
+        font-size: 32px;
+      }
+
+      h3 {
+        font-size: 28px;
+      }
+
+      li {
+        font-size: 20px;
+      }
+    }
+  }
+}

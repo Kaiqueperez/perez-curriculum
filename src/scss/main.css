@@ -1,0 +1,126 @@
+.personalData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px; }
+  .personalData-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    justify-content: center;
+    align-items: center; }
+    .personalData-container h2 {
+      font-size: 24px;
+      color: gray; }
+    .personalData-container p,
+    .personalData-container a {
+      color: lightgray; }
+    @media (min-width: 600px) {
+      .personalData-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        max-width: fit-content;
+        justify-content: space-between; }
+        .personalData-container h2 {
+          font-size: 28px; }
+        .personalData-container p,
+        .personalData-container a {
+          font-size: 20px; } }
+
+.personalResume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px; }
+  .personalResume-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 50%; }
+    .personalResume-container h2 {
+      font-size: 24px;
+      color: gray; }
+    .personalResume-container h3 {
+      font-weight: bold; }
+    .personalResume-container p {
+      color: lightgray; }
+    @media (min-width: 600px) {
+      .personalResume-container {
+        min-width: 600px; }
+        .personalResume-container h2 {
+          font-size: 32px; }
+        .personalResume-container h3 {
+          font-size: 28px;
+          line-height: 132%; }
+        .personalResume-container p {
+          font-size: 20px;
+          line-height: 132%; } }
+
+.personalEducation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px; }
+  .personalEducation-container {
+    width: 50%; }
+    .personalEducation-container ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-weight: bold;
+      line-height: 132%; }
+    .personalEducation-container h2 {
+      color: gray; }
+    .personalEducation-container h3 {
+      line-height: 132%;
+      color: gray; }
+    @media (min-width: 600px) {
+      .personalEducation-container {
+        min-width: 600px; }
+        .personalEducation-container h2 {
+          font-size: 32px; }
+        .personalEducation-container h3 {
+          font-size: 28px; }
+        .personalEducation-container li {
+          font-size: 20px; } }
+  .personalEducation-graduate {
+    padding-top: 32px; }
+    @media (min-width: 1200px) {
+      .personalEducation-graduate {
+        white-space: nowrap; } }
+
+.professionalExp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px; }
+  .professionalExp-container {
+    width: 50%; }
+    .professionalExp-container ul {
+      display: flex;
+      flex-direction: column;
+      gap: 16px; }
+      .professionalExp-container ul li:first-child {
+        padding-top: 32px; }
+      .professionalExp-container ul li {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        line-height: 132%; }
+        .professionalExp-container ul li :first-child {
+          font-weight: bold; }
+        .professionalExp-container ul li :nth-child(2) {
+          color: lightgray; }
+    .professionalExp-container h2 {
+      color: gray; }
+    @media (min-width: 600px) {
+      .professionalExp-container {
+        min-width: 600px; }
+        .professionalExp-container h2 {
+          font-size: 32px; }
+        .professionalExp-container h3 {
+          font-size: 28px; }
+        .professionalExp-container li {
+          font-size: 20px; } }
